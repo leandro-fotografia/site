@@ -1,2 +1,5 @@
-wordpress
-!wordpress/wp-content/themes
+*
+!site
+!wordpress/wp-content/themes/*
+!.gitignore
+!docker-compose.yml
