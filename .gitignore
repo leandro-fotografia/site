@@ -1,5 +1,17 @@
-*
-!site
-!wordpress/wp-content/themes/*
 !.gitignore
 !docker-compose.yml
+
+# Wordpress root
+wordpress/wp-admin
+wordpress/wp-includes
+wordpress/*.php
+wordpress/*.txt
+wordpress/*.html
+wordpress/.htaccess
+
+# Wordpress content
+wordpress/wp-content/plugins
+wordpress/wp-content/*.php
+wordpress/wp-content/themes/*
+
+!wordpress/wp-content/themes/leandro-site
