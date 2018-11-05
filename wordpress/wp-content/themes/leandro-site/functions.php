@@ -14,6 +14,8 @@ function load_assets_site() {
     wp_enqueue_style('blue-style', THEME . '/style/css/color/blue.css');
     wp_enqueue_style('icons-style', THEME . '/style/type/icons.css');
 
+    wp_enqueue_style('style-site', THEME . '/style.css');
+
     wp_enqueue_script('jquery', THEME . '/style/js/jquery.min.js', '' , false);
     wp_enqueue_script('bootstrap-js', THEME . '/style/js/bootstrap.min.js', ['jquery'], true);
     wp_enqueue_script('scripts', THEME . '/style/js/scripts.js', ['jquery', 'site-plugins-js'], true);
