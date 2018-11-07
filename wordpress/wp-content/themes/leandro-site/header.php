@@ -31,7 +31,7 @@
       <div class="navbar-header">
         <div class="basic-wrapper">
           <div class="navbar-brand">
-            <a href="onepage.html">
+            <a href="<?=get_home_url()?>">
               <img src="#" srcset="<?=THEME?>/style/images/logo.png 1x, <?=THEME?>/style/images/logo@2x.png 2x" class="logo-light" alt="" />
               <img src="#" srcset="<?=THEME?>/style/images/logo-dark.png 1x, <?=THEME?>/style/images/logo-dark@2x.png 2x" class="logo-dark"
                 alt="" width="202px;" />
@@ -42,7 +42,7 @@
       </div>
       <!-- /.navbar-header -->
       <nav class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
+        <ul id="menu-principal" class="nav navbar-nav">
           <li class="current"><a href="#home">Home</a></li>
           <li><a href="#services">Serviços</a></li>
           <li><a href="#portfolio">Portifolio</a></li>
