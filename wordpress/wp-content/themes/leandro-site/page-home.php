@@ -34,21 +34,19 @@ get_header();
           <!-- /.thin -->
           <div class="divide10"></div>
           <div class="row">
-            <?php foreach (get_field('galerias') as $obj) : var_dump($obj['galeria']); exit;
-              while($obj['galeria']->have_posts()): $obj['galeria']->the_post(); ?>
+            <?php foreach (get_field('para-elas') as $gal) : ?>
             <div class="col-sm-4">
               <div class="caption-overlay">
                 <div class="escurecer">
                   <div class="descricao-destaque">
                     <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                      <?=$gal['texto']?>
+                    </p>
                   </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
+                  <figure><a><img src="<?=$gal['imagem']?>" alt="" /> </a></figure>
                   <div class="caption bottom-right">
                     <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
+                      <h3 class="main-title layer"><?=$gal['titulo']?></h3>
                     </div>
                     <!--/.title -->
                   </div>
@@ -58,7 +56,7 @@ get_header();
               </div>
             </div>
             <!-- /column -->
-            <?php endwhile; endforeach; ?>
+            <?php endforeach; ?>
           </div>
           <!-- /.row -->
 
@@ -78,124 +76,19 @@ get_header();
           <!-- /.thin -->
           <div class="divide10"></div>
           <div class="row">
+            <?php foreach (get_field('para-empresas') as $gal) : ?>
             <div class="col-sm-4">
               <div class="caption-overlay">
                 <div class="escurecer">
                   <div class="descricao-destaque">
                     <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                      <?=$gal['texto']?>
+                    </p>
                   </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
+                  <figure><a><img src="<?=$gal['imagem']?>" alt="" /> </a></figure>
                   <div class="caption bottom-right">
                     <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
-                    </div>
-                    <!--/.title -->
-                  </div>
-
-                </div>
-                <!--/.caption -->
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="caption-overlay">
-                <div class="escurecer">
-                  <div class="descricao-destaque">
-                    <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                  </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
-                  <div class="caption bottom-right">
-                    <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
-                    </div>
-                    <!--/.title -->
-                  </div>
-
-                </div>
-                <!--/.caption -->
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="caption-overlay">
-                <div class="escurecer">
-                  <div class="descricao-destaque">
-                    <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                  </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
-                  <div class="caption bottom-right">
-                    <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
-                    </div>
-                    <!--/.title -->
-                  </div>
-
-                </div>
-                <!--/.caption -->
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="caption-overlay">
-                <div class="escurecer">
-                  <div class="descricao-destaque">
-                    <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                  </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
-                  <div class="caption bottom-right">
-                    <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
-                    </div>
-                    <!--/.title -->
-                  </div>
-
-                </div>
-                <!--/.caption -->
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="caption-overlay">
-                <div class="escurecer">
-                  <div class="descricao-destaque">
-                    <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                  </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
-                  <div class="caption bottom-right">
-                    <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
-                    </div>
-                    <!--/.title -->
-                  </div>
-
-                </div>
-                <!--/.caption -->
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="caption-overlay">
-                <div class="escurecer">
-                  <div class="descricao-destaque">
-                    <p style="color:white; font-size: 22px; text-align: center; padding:25px;">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                  </div>
-                  <figure><a><img src="<?=THEME?>/style/images/art/s1.jpg" alt="" /> </a></figure>
-                  <div class="caption bottom-right">
-                    <div class="title">
-                      <h3 class="main-title layer">Retratos</h3>
+                      <h3 class="main-title layer"><?=$gal['titulo']?></h3>
                     </div>
                     <!--/.title -->
                   </div>
@@ -205,6 +98,7 @@ get_header();
               </div>
             </div>
             <!-- /column -->
+            <?php endforeach; ?>
           </div>
           <!-- /.row -->
 
