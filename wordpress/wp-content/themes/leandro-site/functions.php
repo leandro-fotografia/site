@@ -25,3 +25,12 @@ function load_assets_site() {
 }
 
 add_action('wp_enqueue_scripts', 'load_assets_site');
+
+/**
+ * 
+ * funções
+ */
+function getGaleria($id) {
+    $galeria = get_fields($id);
+    return $galeria['imagem'];
+}
