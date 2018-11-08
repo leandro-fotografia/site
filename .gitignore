@@ -1,6 +1,11 @@
 !.gitignore
 !docker-compose.yml
 
+# root
+ajax/
+contact/
+style/
+
 # Wordpress root
 wordpress/wp-admin
 wordpress/wp-includes
