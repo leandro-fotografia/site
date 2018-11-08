@@ -10,6 +10,8 @@ wordpress/*.html
 wordpress/.htaccess
 
 # Wordpress content
+wordpress/wp-content/languages
+wordpress/wp-content/uploads
 wordpress/wp-content/plugins
 wordpress/wp-content/*.php
 wordpress/wp-content/themes/*
