@@ -168,10 +168,7 @@ get_header();
             </div>
             <!-- /column -->
             <div class="col-sm-5">
-              <p>Tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla
-                sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam
-                id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh.</p>
+              <?=get_field('sobre') ?>
               <ul class="social">
                 <div class="panel-group" id="accordion">
                   <div class="panel panel-default">
@@ -180,19 +177,8 @@ get_header();
                           href="#collapseTwo"> Equipamentos </a> </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
-                      <div class="panel-body"> <strong>Equipamentos de Fotografia</strong>
-                        Camera Canon EOS Rebel T6i<br>
-                        Lente Canon EF-S 18-55MM<br>
-                        Lente Canon EF 50MM F/1.8 STM<br>
-                        Lente Canon EF 85MM F/1.8 USM<br>
-                        Lente Canon EF 75-300MM F/4-5.6<br><br>
-
-                        <strong> Equipamentos de Iluminação e microfone</strong>
-                        Iluminador de vídeo Light Led 500 PRO 5500K ATEK <br>
-                        Tripé Studio ATEK <br>
-                        Tripé Opus 3 ATEK <br>
-                        Globo Difusor AT 233 ATEK<br>
-                        Microfone Profissional Rode Videomic com Sistema Rycote</div>
+                      <div class="panel-body">
+                        <?=get_field('equipamentos') ?>
                     </div>
                   </div>
                   <div class="panel panel-default">
@@ -201,13 +187,7 @@ get_header();
                           href="#collapseThree"> Certificados </a> </h4>
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
-                      <div class="panel-body"> Focus Fotografia - Conhecendo a luz (Ago/2018)<br>
-                        Focus Fotografia - Interpretando a luz (Set/2018)<br>
-                        Focus Fotografia - Moda, retrato e books (Out/2018)<br>
-                        Focus Fotografia - Estúdio publicitário editorial e still (Out/2018)<br>
-                        Focus Fotografia - Fotojornalismo (Nov/2018)<br>
-                        Focus Fotografia - Casamento e eventos sociais (Nov/2018)<br>
-                        Focus Fotografia - Photoshop para fotógrafos (Dez/2018)<br> </div>
+                      <div class="panel-body"> <?=get_field('certificados') ?> </div>
                     </div>
                   </div>
                 </div>
@@ -215,36 +195,14 @@ get_header();
             </div>
             <div class="col-md-4">
               <ul class="progress-list">
+                <?php foreach (get_field('skills') as $skill): ?>
                 <li>
-                  <p>Certificados <em>7</em></p>
+                  <p><?=$skill['nome']?> <em><?=$skill['porcentagem']?></em></p>
                   <div class="progress plain">
-                    <div class="bar" data-width="70"></div>
+                    <div class="bar" data-width="<?=getPorcentagem($skill['porcentagem'])?>"></div>
                   </div>
                 </li>
-                <li>
-                  <p>Ensaios (para elas) <em>9</em></p>
-                  <div class="progress plain">
-                    <div class="bar" data-width="90"></div>
-                  </div>
-                </li>
-                <li>
-                  <p>Fotos do portfólio<em>918</em></p>
-                  <div class="progress plain">
-                    <div class="bar" data-width="100"></div>
-                  </div>
-                </li>
-                <li>
-                  <p>Galeria <em>918</em></p>
-                  <div class="progress plain">
-                    <div class="bar" data-width="80"></div>
-                  </div>
-                </li>
-                <li>
-                  <p>Seguidores em mídias sociais <em>2174</em></p>
-                  <div class="progress plain">
-                    <div class="bar" data-width="100"></div>
-                  </div>
-                </li>
+                <?php endforeach; ?>
               </ul>
             </div>
             <!-- /column -->
@@ -265,34 +223,14 @@ get_header();
       <div class="container inner text-center">
         <h3 class="section-title">Depoimentos</h3>
         <div class="testimonials owl-carousel thin">
+          <?php foreach (getDepoimentos() as $dep): ?>
           <div class="item">
             <blockquote>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. Nullam dolor nibh ultricies vehicula
-                elit vulputate tristique egestas.<small class="meta">Nikolas Brooten</small></p>
+              <p> <?=$dep['depoimento']?> <small class="meta"><?=$dep['feito']?></small></p>
             </blockquote>
           </div>
           <!-- /.item -->
-          <div class="item">
-            <blockquote>
-              <p>Cras justo odio, dapibus facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Etiam
-                porta sem malesuada magna mollis euismod.<small class="meta">Coriss Ambady</small></p>
-            </blockquote>
-          </div>
-          <!-- /.item -->
-          <div class="item">
-            <blockquote>
-              <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis id vestibulum. Donec sed odio dui.
-                Sed posuere consectetur est at lobortis.<small class="meta">Barclay Widerski</small></p>
-            </blockquote>
-          </div>
-          <!-- /.item -->
-          <div class="item">
-            <blockquote>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum.
-                Vivamus sagittis lacus vel augue laoreet.<small class="meta">Elsie Spear</small></p>
-            </blockquote>
-          </div>
-          <!-- /.item -->
+          <?php endforeach; ?>
         </div>
         <!-- /.testimonials -->
       </div>
@@ -305,69 +243,15 @@ get_header();
         <div class="container inner">
           <div class="thin">
             <h3 class="section-title text-left">Entre em contato</h3>
-            <p class="text-left">Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a
-              pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia.</p>
+            <p class="text-left"><?=get_field('contato_texto')?></p>
             <ul class="contact-info text-left">
-              <li><i class="icon-location"></i>Avenida Paulista, 104</li>
-              <li><i class="icon-phone"></i>+55 (11) 99999-9999</li>
-              <li><i class="icon-mail"></i><a href="contato@email.com">contatot@email.com</a> </li>
+              <li><i class="icon-location"></i><?=get_field('endereco')?></li>
+              <li><i class="icon-phone"></i><?=get_field('telefone')?></li>
+              <li><i class="icon-mail"></i><a href="<?=get_field('email')?>"><?=get_field('email')?></a> </li>
             </ul>
             <div class="divide50"></div>
             <div class="form-container">
-              <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-field">
-                      <label>
-                        <input type="text" name="name" placeholder="NOme" required>
-                      </label>
-                    </div>
-                    <!--/.form-field -->
-                  </div>
-                  <!--/column -->
-                  <div class="col-sm-6">
-                    <div class="form-field">
-                      <label>
-                        <input type="email" name="email" placeholder="e-mail" required>
-                      </label>
-                    </div>
-                    <!--/.form-field -->
-                  </div>
-                  <!--/column -->
-                  <div class="col-sm-6">
-                    <div class="form-field">
-                      <label>
-                        <input type="tel" name="tel" placeholder="Telefone">
-                      </label>
-                    </div>
-                    <!--/.form-field -->
-                  </div>
-                  <!--/column -->
-                  <div class="col-sm-6">
-                    <div class="form-field">
-                      <label class="custom-select">
-                        <select name="department" required="required">
-                          <option value="">Departamento</option>
-                          <option value="Sales">Foto</option>
-                          <option value="Marketing">Videos</option>
-                          <option value="Support">Network</option>
-                          <option value="Other">Outro</option>
-                        </select>
-                        <span>
-                          <!-- fake select handler --></span> </label>
-                    </div>
-                    <!--/.form-field -->
-                  </div>
-                  <!--/column -->
-                </div>
-                <!--/.row -->
-                <textarea name="message" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
-                <input type="submit" class="btn" value="Enviar" data-error="Preencha todos campos" data-processing="Enviando..."
-                  data-success="Obrigado!">
-                <footer class="notification-box"></footer>
-              </form>
+              <?= do_shortcode('[contact-form-7 id="84" title="Contact form 1"]')?>
               <!--/.vanilla-form -->
             </div>
             <!--/.form-container -->

@@ -34,3 +34,26 @@ function getGaleria($id) {
     $galeria = get_fields($id);
     return $galeria['imagem'];
 }
+
+function getPorcentagem($number) {
+    $porcent = 100;
+    if ($number < $porcent) $porcent = $number;
+
+    return $porcent;
+}
+
+function getDepoimentos() {
+    $args = [
+        'post_type' => 'depoimentos',
+        'posts_per_page' => -1
+    ];
+
+    $depoimentos = new WP_Query($args);
+    
+    $array = [];
+    foreach ($depoimentos->posts as $post) {
+        $array[] = get_fields($post->ID);
+    }
+
+    return $array;
+}
