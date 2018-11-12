@@ -221,8 +221,14 @@ get_header();
     <footer class="footer inverse-wrapper">
       <div class="sub-footer">
         <div class="container inner">
-          <p class="text-center">© 2018. Todos direitos reservados</p>
+          <div class="col-lg-10">
+            <p class="text-center">© 2018. Todos direitos reservados</p>
+          </div>
+          <div class="col-lg-2">
+            <img style="width: 10%;" src="<?=THEME?>/style/images/icone-cadeado.png" alt="Area restrita" />    
+          </div>
         </div>
+             
       </div>
     </footer>
   
