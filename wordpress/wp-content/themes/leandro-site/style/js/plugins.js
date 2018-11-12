@@ -874,7 +874,7 @@ var VanillaForm=function(e){"use strict";function t(){var e="9320087105434084715
 		var target		= item.data ( 'target' );
 		var bar_classes = ' ';
 		var animation_class = '';
-		var bar_styles	= 'background-color:' + settings.backgroundColor + ';height:' + settings.height + 'px;';
+		var bar_styles	= 'background-color:' + settings.backgroundColor + ';height: 20px;';
 		if ( settings.shadow ) { bar_classes += 'shadow'; }
 		if ( settings.border ) { bar_classes += ' border'; }
 		if ( settings.animation ) { animation_class = ' animate'; }

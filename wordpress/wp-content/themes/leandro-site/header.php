@@ -44,10 +44,10 @@
       <nav class="collapse navbar-collapse">
         <ul id="menu-principal" class="nav navbar-nav">
           <li class="current"><a href="#home">Home</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#portfolio">Portifolio</a></li>
+          <li><a href="#services">Para Você</a></li>
+          <li><a href="#portfolio">Para Empreas</a></li>
           <li><a href="#gallery">Galeria</a></li>
-          <li><a href="#about">Sobre</a></li>
+          <li><a href="#about">O Fotógrafo</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
         <!-- /.navbar-nav -->
@@ -58,6 +58,9 @@
         <ul class="social naked">
           <li><a href="#"><i class="icon-s-facebook"></i></a></li>
           <li><a href="#"><i class="icon-s-instagram"></i></a></li>
+          <li><a href="#"><i class="icon-s-youtube"></i></a></li>
+          <li><a href="#"><i class="icon-s-pinterest"></i></a></li>
+          <i class="fab fa-twitter"></i>
         </ul>
         <!-- /.social -->
       </div>
