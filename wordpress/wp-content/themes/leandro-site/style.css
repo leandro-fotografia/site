@@ -3500,6 +3500,27 @@ select {
     font-weight: 500;
 }
 
+/**
+*   Add btn select
+*/
+span.departamento::after {
+    content: '\e84c';
+    font-family: 'fontello';
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    right: 0px;
+    top: -17px;
+    height: 40px;
+    width: 40px;
+    pointer-events: none;
+    padding: 10px 0 0 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    background: #70aed2;
+    color: #fff;
+}
+
 label {
     font-weight: inherit
 }
@@ -3579,11 +3600,13 @@ footer input:focus {
 
 textarea {
     height: 100%;
+    max-height: 200px;
     padding: 8px 13px;
     margin-bottom: 15px;
     min-height: 200px;
     resize: vertical;
     font-weight: inherit;
+    resize: no-resize;
 }
 
 .form-container .form-field {

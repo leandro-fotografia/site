@@ -104,7 +104,7 @@ get_header();
               <div class="row" style="margin:0;">
                 <?php foreach (getGaleria(get_field('select-galeria')) as $galeria): ?>
                 <div class=" col-md-2 px-0 px-0 back-negro">
-                  <a class="cbp-caption fancybox-media" href="<?=THEME?>/style/images/leandro.jpeg">
+                  <a class="cbp-caption fancybox-media" href="<?=$galeria['imagem']?>">
                     <figure class="icon-overlay light-over">
                       <div class="caption bottom-right cpp">                      
                         <div class="title">
@@ -156,6 +156,15 @@ get_header();
                     </div>
                     <div id="collapseThree" class="panel-collapse collapse">
                       <div class="panel-body"> <?=get_field('certificados') ?> </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" class="panel-toggle" data-parent="#accordion"
+                          href="#collapseFour"> Dicas de Leitura </a> </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                      <div class="panel-body"> <?=get_field('dicas_leitura') ?> </div>
                     </div>
                   </div>
                 </div>
