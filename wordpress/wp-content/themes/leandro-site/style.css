@@ -3503,7 +3503,7 @@ select {
 /**
 *   Add btn select
 */
-span.departamento::after {
+span.departamento::before {
     content: '\e84c';
     font-family: 'fontello';
     position: absolute;
