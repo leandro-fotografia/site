@@ -32,7 +32,7 @@ get_header();
           <div class="divide10"></div>
           <div class="row">
             <?php foreach (get_field('para-elas') as $gal) : ?>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="caption-overlay">
                 <div class="escurecer">                 
                   <figure><a><img src="<?=$gal['imagem']?>" alt="" /> </a></figure>
@@ -65,7 +65,7 @@ get_header();
           <div class="divide10"></div>
           <div class="row">
             <?php foreach (get_field('para-empresas') as $gal) : ?>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="caption-overlay">
                 <div class="escurecer">                 
                   <figure><a><img src="<?=$gal['imagem']?>" alt="" /> </a></figure>
