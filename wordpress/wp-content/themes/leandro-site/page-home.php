@@ -35,7 +35,7 @@ get_header();
             <div class="col-sm-3">
               <div class="caption-overlay">
                 <div class="escurecer">                 
-                  <figure><a><img src="<?=$gal['imagem']?>" alt="" /> </a></figure>
+                  <figure><a><img src="<?=$gal['imagem']['sizes']['medium_large']?>" alt="" /> </a></figure>
                   <div class="caption bottom-right">
                     <div class="title">
                       <h3 class="main-title layer"><?=$gal['titulo']?></h3>
@@ -68,7 +68,7 @@ get_header();
             <div class="col-sm-3">
               <div class="caption-overlay">
                 <div class="escurecer">                 
-                  <figure><a><img src="<?=$gal['imagem']?>" alt="" /> </a></figure>
+                  <figure><a><img src="<?=$gal['imagem']['sizes']['medium_large']?>" alt="" /> </a></figure>
                   <div class="caption bottom-right">
                     <div class="title">
                       <h3 class="main-title layer"><?=$gal['titulo']?></h3>
