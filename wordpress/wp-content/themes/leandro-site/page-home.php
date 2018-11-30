@@ -104,7 +104,7 @@ get_header();
               <div class="row" style="margin:0;">
                 <?php foreach (getGaleria(get_field('select-galeria')) as $galeria): ?>
                 <div class=" col-md-2 px-0 px-0 back-negro">
-                  <a class="cbp-caption fancybox-media" href="<?=$galeria['imagem']?>">
+                  <a class="cbp-caption fancybox-media" href="<?=$galeria['imagem']['sizes']['medium_large']?>">
                     <figure class="icon-overlay light-over">
                       <div class="caption bottom-right cpp">                      
                         <div class="title">
@@ -113,8 +113,10 @@ get_header();
                             <?=$galeria['texto']?>
                           </h3>
                         </div>
-                      </div>                    
-                      <img src="<?=$galeria['imagem']?>" alt="<?=$galeria['texto']?>" />                   
+                      </div>  
+                      <img 
+                      src="<?=$galeria['imagem']['sizes']['medium_large']?>" 
+                      alt="<?=$galeria['texto']?>" />                   
                     </figure>
                   </a>
                 </div>
