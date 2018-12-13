@@ -11,5 +11,23 @@
         scrollTop: element.top + 'px'
       }, 'slow');
     });
+
+    $('.link-Two').on('click', function () {      
+      $("#collapseThree").removeClass("in");
+      $("#collapseFour").removeClass("in");     
+    });
+
+    $('.link-Three').on('click', function () {     
+      $("#collapseTwo").removeClass("in");
+      $("#collapseFour").removeClass("in");     
+    });
+
+    $('.link-Four').on('click', function () {      
+      $("#collapseTwo").removeClass("in");
+      $("#collapseThree").removeClass("in");     
+    });
+
+
+
   })
 })(jQuery);
