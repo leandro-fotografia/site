@@ -9,6 +9,7 @@ get_header();
         <div class="tp-fullscreen">
             <ul>
                 <?php foreach (get_field('slider') as $slider): ?>
+                <?php  if ($slider['tipo'] == 'Imagem'): ?>
                 <li data-transition="fade"> <img src="<?=$slider['imagem']?>" alt="<?=$slider['titulo']?>"
                         data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
                     <h1 class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800"
@@ -20,25 +21,29 @@ get_header();
                         <?=$slider['texto']?>
                     </div>
                 </li>
-                <?php endforeach; ?>
-                <li data-transition="fade"> <img src="http://leandrophotographer.com.br/wp-content/uploads/2018/12/nyc.jpg"
+                <?php elseif ($slider['tipo'] == 'Video'): ?>
+                <li data-transition="fade"> <img src="<?=$slider['imagem']?>"
                         alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
                     <div class="tp-caption large text-center sfb" data-x="center" data-y="293" data-speed="900"
-                        data-start="800" data-endspeed="100" data-easing="Sine.easeOut" style="z-index: 2;">Video Video
-                        Video Video</div>
+                        data-start="800" data-endspeed="100" data-easing="Sine.easeOut" style="z-index: 2;">
+                        <?=$slider['titulo']?>
+                    </div>
                     <div class="tp-caption medium text-center sfb" data-x="center" data-y="387" data-speed="900"
-                        data-start="1500" data-endspeed="100" data-easing="Sine.easeOut" style="z-index: 2;">Texto
-                        Texto Texto Texto Texto</div>
+                        data-start="1500" data-endspeed="100" data-easing="Sine.easeOut" style="z-index: 2;">
+                        <?=$slider['texto']?>
+                    </div>
                     <div class="tp-caption tp-fade fadeout fullscreenvideo" data-x="0" data-y="0" data-speed="1000"
                         data-start="1100" data-easing="Power4.easeOut" data-elementdelay="0.01" data-endelementdelay="0.1"
                         data-endspeed="1500" data-endeasing="Power4.easeIn" data-autoplay="true"
                         data-autoplayonlyfirsttime="false" data-nextslideatend="true" data-dottedoverlay="twoxtwo"
                         data-volume="mute" data-forceCover="1" data-aspectratio="16:9" data-forcerewind="on" style="z-index: 1;">
-                        <video class="" preload="none" width="100%" height="100%" poster='http://leandrophotographer.com.br/wp-content/uploads/2018/12/nyc.jpg'>
-                            <source src='http://leandrophotographer.com.br/wp-content/uploads/2018/12/nyc.mp4' type='video/mp4' />
+                        <video class="" preload="none" width="100%" height="100%" poster='<?=$slider['imagem']?>'>
+                            <source src='<?=$slider['video']?>' type='video/mp4' />
                         </video>
                     </div>
                 </li>
+                <? endif; ?>
+                <?php endforeach; ?>
             </ul>
             <div class="tp-bannertimer tp-bottom"></div>
         </div>

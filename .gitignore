@@ -6,6 +6,9 @@ ajax/
 contact/
 /style/
 
+# videos mp4
+*.mp4
+
 # Wordpress root
 wordpress/wp-admin
 wordpress/wp-includes
