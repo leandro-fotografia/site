@@ -332,12 +332,13 @@ h4.post-title {
 }
 
 .section-title {
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 19px;
+    line-height: 10px;
     width: 32%;
     padding: 12px;
     background-color: #212124;
     color: white;
+    padding-left: 7%;
 }
 
 .section-title span {
@@ -554,7 +555,7 @@ ul.circled li:before {
 
 .contact-info li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 10px 10px 0;
 }
 
 .contact-info i {
@@ -2722,7 +2723,7 @@ figure img {
 }
 
 .caption-overlay .caption .layer {
-    font-size: 26px;
+    font-size: 21px;
     padding: 12px 20px;
     color: #FFF;
     transition: all 200ms ease-in;
@@ -2738,13 +2739,13 @@ figure img {
 }
 
 .caption-overlay:hover figure img {
-    opacity: 0.1;
+    opacity: 0.3;
 }
 .title, .caption-overlay .caption, .descricao-destaque p{
     transition: all 300ms ease-in;
 }
 .caption-overlay:hover .title{
-    border-bottom: 6px solid white;
+    border-bottom: 3px solid white;
     width: 80%;
     margin: auto;
 }
@@ -2758,9 +2759,9 @@ figure img {
 
 .descricao-destaque p{
     color:white;
-    font-size: 22px; 
+    font-size: 16px; 
     text-align: center; 
-    padding:25px;
+    padding:20px;
     display: none;
 }
 .descricao-destaque {
@@ -2772,7 +2773,7 @@ figure img {
     display: block;
 }
 
-.owl-carousel .caption-overlay .caption {
+.owl-carousel .caption-overlay .caption{
     width: 100%;
     text-align: center;
     display: inline;
@@ -3071,7 +3072,8 @@ figure img {
 
 .panel-group .panel-title>a {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .panel-group .panel-active a,
@@ -3090,7 +3092,7 @@ figure img {
 }
 
 .panel-body {
-    padding: 20px 0;
+    padding: 76px 0;
 }
 
 .boxed .panel-body {
@@ -3610,7 +3612,8 @@ textarea {
 }
 
 .form-container .form-field {
-    position: relative
+    position: relative;
+    margin-top: 12px;
 }
 
 .form-container .form-field i {
@@ -5433,4 +5436,26 @@ textarea {
 
 .panel-body p{
     font-size: 14px;
+}
+.tp-caption{
+    width: 50%;
+}
+.titulo-areas{
+    position: absolute;
+    width: 26.7%;
+    z-index: 9999999999999;
+    left: 0;
+}
+.mt-5{
+    margin-top: 45px;
+}
+.title p{
+    font-size: 12px;
+    line-height: 10px;
+}
+.form-container p{
+    display: none;
+}
+.wpcf7-form-control-wrap textarea{
+    margin-top: 12px;
 }
