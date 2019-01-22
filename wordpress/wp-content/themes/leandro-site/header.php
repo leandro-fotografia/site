@@ -56,11 +56,13 @@
 
       <div class="social-wrapper">
         <ul class="social naked">
-          <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+       
           <li><a href="https://www.instagram.com/leandrosp.photographer/"><i class="icon-s-instagram"></i></a></li>
-          <li><a href="#"><i class="icon-s-youtube"></i></a></li>
+         
           <li><a href="https://br.pinterest.com/leandrophotographer"><i class="icon-s-pinterest"></i></a></li>
           <li><a href="https://twitter.com/LeandroPhotogr2"><i class="fab fa-twitter"></i></a></li>
+          
+          <li><a href="https://500px.com/leandrophotographer"><i class="fab fa-500px"></i></a></li>
           
         </ul>
         <!-- /.social -->

@@ -5442,8 +5442,7 @@ textarea {
 }
 .titulo-areas{
     position: absolute;
-    width: 26.7%;
-    z-index: 9999999999999;
+    width: 26.7%;    
     left: 0;
 }
 .mt-5{
