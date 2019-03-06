@@ -23,7 +23,9 @@ section {
 </style>
 <section id="gallery">
     <div>
-        <img src="#" srcset="<?=THEME?>/style/images/logo.png 1x, <?=THEME?>/style/images/logo@2x.png 2x" class="logo-light" alt="" />
+        <a href="<?=get_home_url();?>">
+            <img src="#" srcset="<?=THEME?>/style/images/logo.png 1x, <?=THEME?>/style/images/logo@2x.png 2x" class="logo-light" alt="" />
+        </a>
         <div class="inner">
             <div class="container">
                 <h3 class="section-title titulo-areas"><?= get_the_title(); ?></h3>
