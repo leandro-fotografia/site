@@ -302,7 +302,9 @@ get_header();
                 <p class="text-center">© 2018. Todos direitos reservados</p>
             </div>
             <div class="col-lg-2">
+            <a href="#myModal" role="button" data-toggle="modal">
                 <img style="width: 10%;" src="<?=THEME?>/style/images/icone-cadeado.png" alt="Area restrita" />
+            </a>
             </div>
         </div>
 
@@ -317,4 +319,35 @@ get_header();
         $(".onepage a").first().hide("fast");
     }
 </script>
+<!-- Modal -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Acessar área restrita</h4>
+            </div>
+            <div class="modal-body">
+                <form id="restrctForm" class="form" action="">
+                    <div id="alertUser" class="alert alert-danger" role="alert">
+                        Usuário não autorizado!
+                    </div>
+                    <input type="hidden" name="id" value="<?=get_the_ID();?>">
+                    <div class="form-group">
+                        <label for=""> Login </label>
+                        <input class="form-control" type="text" name="login">
+                    </div>
+                    <div class="form-group">
+                        <label for=""> Senha </label>
+                        <input class="form-control" type="password" name="password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="areaRestrita()" class="btn btn-primary">Acessar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php get_footer(); ?>

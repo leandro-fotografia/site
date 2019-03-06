@@ -5459,3 +5459,14 @@ textarea {
 .wpcf7-form-control-wrap textarea{
     margin-top: 12px;
 }
+
+/**
+* modal
+*/
+.modal-dialog {
+    z-index: 9999 !important;
+}
+
+#alertUser{
+    display: none;
+}

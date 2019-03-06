@@ -20,8 +20,13 @@ function load_assets_site() {
     wp_enqueue_script('classie', THEME . '/style/js/classie.js', ['jquery'], true);
     wp_enqueue_script('jquery-themepunch', THEME . '/style/js/jquery.themepunch.tools.min.js');
     wp_enqueue_script('scripts', THEME . '/style/js/scripts.js', ['jquery', 'site-plugins-js'], true);
+    wp_enqueue_script('acesso-restrito', THEME . '/style/js/acesso-restrito.js', ['jquery'], true);
     
     wp_enqueue_script('custom-js', THEME . '/style/js/custom.js', ['jquery', 'site-plugins-js', 'scripts'], true);
+
+    wp_localize_script( 'acesso-restrito', 'WPObject', array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' )
+    ) );
 }
 
 add_action('wp_enqueue_scripts', 'load_assets_site');
@@ -57,3 +62,29 @@ function getDepoimentos() {
 
     return $array;
 }
+
+function checkUser() {
+    if (session_id() == '') session_start();
+    if (!isset($_SESSION['logged'])) {
+        HEADER('location:'.get_home_url());
+    }
+}
+
+// Função para checar se o usuário existe
+function restrito() {
+    $fields = get_fields($_POST['id']);
+    $msg = '';
+    if ($fields['login'] == $_POST['dados']['usuario'] && $fields['senha'] == $_POST['dados']['senha']) {
+        if (session_id() == '') session_start();
+        $_SESSION['logged'] = true;
+        $msg = 'usuario autorizado';
+    } else {
+        $msg = 'usuario nao autorizado';
+    }
+
+    echo json_encode(['msg' => $msg]);
+    exit;
+}
+
+add_action('wp_ajax_restrito', 'restrito');
+add_action('wp_ajax_nopriv_restrito', 'restrito');

@@ -27,6 +27,7 @@
     </div>
   </div>
   <main class="body-wrapper">
+    <?php if (is_home() || is_front_page()): ?>
     <div class="navbar">
       <div class="navbar-header">
         <div class="basic-wrapper">
@@ -67,4 +68,6 @@
       </div>
       <!-- /.social-wrapper -->
     </div>
-    <!-- /.navbar -->
+  <?php endif; ?>
+  
+  <!-- /.navbar -->
