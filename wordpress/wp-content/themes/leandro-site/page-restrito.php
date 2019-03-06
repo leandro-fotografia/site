@@ -12,11 +12,18 @@
 <style>
 body,
 section {
-    background: rgba(29, 29, 33, 0.8) !important;
+    background: rgba(29, 29, 33) !important;
+}
+
+.logo-light {
+    margin: 0px auto;
+    text-align: center;
+    display: block;
 }
 </style>
 <section id="gallery">
     <div>
+        <img src="#" srcset="<?=THEME?>/style/images/logo.png 1x, <?=THEME?>/style/images/logo@2x.png 2x" class="logo-light" alt="" />
         <div class="inner">
             <div class="container">
                 <h3 class="section-title titulo-areas"><?= get_the_title(); ?></h3>
